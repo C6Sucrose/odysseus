@@ -5,8 +5,8 @@ services:
       - "${APP_BIND:-127.0.0.1}:${APP_PORT:-7000}:7000"
     volumes:
       - E:\Code\Triage-AI:/workspace
-      - ./data:/app/data
-      - ./logs:/app/logs
+      - ./data:/app/data:z
+      - ./logs:/app/logs:z
       # Cookbook remote-server SSH identity. Odysseus can generate a key here;
       # add the shown public key to each remote server's authorized_keys.
       - ./data/ssh:/app/.ssh:z
